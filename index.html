@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spiderman Comic trivia game</title>
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/trivia.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Opening Screen and Play Button -->
+    <button class ="btn btn-success" id ="start">Start Game</button><br>
+    <button class="btn btn-success" id="reset">Play Again?</button>
+
+    <!-- Game HTML -->
+    <section class="timer scoreboard">
+        <div class="row">
+            <div class="timer col-2">00:00</div>
+            <div class="questionsRight col-6">Questions Right: <span id="numberQRight">0</span></div>
+            <div class="remainingQuestions col-4">Questions Remaining: <span id="remainingQuesNumb"></span></div>
+        </div>
+    </section>
+
+    <section class="question">
+        <div class="currentQuestion"></div>
+
+    <section class="Answers container">
+         <div class="answers"></div>
+
+               
+    </section>
+   
+    <section class="results">
+         <div class="results"></div>
+
+      
+    </section>
+          
+    
+
+    <!-- Results HTML -->
+
+    <script type="text/javascript" src="./assets/trivia.js"></script>
+
+</body>
+</html>
