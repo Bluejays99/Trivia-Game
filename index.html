@@ -1,52 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spiderman Comic trivia game</title>
-
-    <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/trivia.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../Trivia-Game/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>TriviaGame</title>
 
 </head>
+
 <body>
-    <!-- Opening Screen and Play Button -->
-    <button class ="btn btn-success" id ="start">Start Game</button><br>
-    <button class="btn btn-success" id="reset">Play Again?</button>
 
-    <!-- Game HTML -->
-    <section class="timer scoreboard">
-        <div class="row">
-            <div class="timer col-2">00:00</div>
-            <div class="questionsRight col-6">Questions Right: <span id="numberQRight">0</span></div>
-            <div class="remainingQuestions col-4">Questions Remaining: <span id="remainingQuesNumb"></span></div>
-        </div>
-    </section>
+    <div id="container">
+        <div id="row">
+            <div id="col-sm">
+                <h1>TRIVIA GAME</h1>
+                <h4>A Trivia Game About Spiderman</h4>
+                <br><br>z
+                <button id="start">START</button>
 
-    <section class="question">
-        <div class="currentQuestion"></div>
+                <div id="finalScore">
+                <div id="row">
+                    <div id="col-sm"> 
 
-    <section class="Answers container">
-         <div class="answers"></div>
+                    <h3 id="userCorrect">Correct Answers: 0</h3>
+                    <h3 id="userIncorrect">Incorrect Answers: 0</h3>
+                    <h3 id="unanswered">Unanswered: 8</h3>
+
+                    <br><br>
+
+                    <p id="correctAnswersText">CORRECT ANSWERS:</p>
+                    <p>When was Spiderman created? <span>Answer: 1962</span></p>
+                    <p>Who invented Spider-man? <span>Answer: Stan Lee & Steve Ditko</span></p>
+                    <p>What is the first apperance comic book of Spider-man? <span>Answer: Amazing Fantasy 15</span></p> 
+                    <p>How does Spider-man get hsi powers? <span>Answer: He is on a field trip to a science lab one day, and is bitten by a radioactive spider</span></p>
+                    <p>What is Spider-man's real name? <span>Answer: Peter Parker</span></p>              
+                    <p>Who does Spider-man live with at home? <span>Answer: His Aunt and Uncle</span></p>
+                    <p>Who is Spider-man's greatest enemy? <span>Answer: The Green Goblin</span></p>
+                    <p>How much is the 1st apperance of Spiderman's comic book graded cgc 9.6 worth? </span>Answer: 1.1 million</p>
+                    
+
+                    </div>
+                </div>
+                </div>
+                
+                
+                <div id="questions">
+                    <div id="row">
+                        <div id="col-sm">            
+                            <h4 id="timeRemaining">Time Remaining: <span id="minute"> 3 </span>:<span id="seconds">00</span></h4>
+                            <br><br>
+
+                            <div id="questionOne">
+                                <h4>Question 1: When was Spiderman created?</h4>   
+                                <input type="radio" name="created" value="1">1912</input>
+                                <input type="radio" name="created" value="2">1995</input>
+                                <input type="radio" name="created" value="3">2019</input>
+                                <input type="radio" name="created" value="4">1962</input>
+                                <br><br>
+                            </div>
+                             
+                            <div id="questionTwo">        
+                                <h4>Question 2: Who invented Spiderman?</h4>
+                                <input type="radio" name="invented" value="1"> Stan Lee</input>
+                                <input type="radio" name="invented" value="2"> Steve Ditko</input>
+                                <input type="radio" name="invented" value="3"> John Romita Sr</input>
+                                <input type="radio" name="invented" value="4"> A & B</input>
+                                <br><br>
+                            </div>
+                            
+                            <div id="questionThree">
+                                <h4>Question 3: What is the first appearance comic book of Spiderman?</h4> 
+                                <input type="radio" name="apperance" value="1">Amazing Spiderman 1</input>
+                                <input type="radio" name="appearance" value="2">Incredible Hulk 1</input>
+                                <input type="radio" name="appearance" value="3">Amazing Fantasy 15</input>
+                                <input type="radio" name="appearance" value="4">Tales of Suspense 39</input>
+                                <br><br>
+                            </div>
+
+                    
+                            
+                            <div id="questionFour">
+                                <h4>Question 4: How does Spiderman get his powers?</h4>
+                                <input type="radio" name="get" value="1">He meets a spider and he gets his powers magically</input>
+                                <input type="radio" name="get" value="2">He accidentally ate a spider and got superpowers</input>
+                                <input type="radio" name="get" value="3">A scientist injects him with a superpower formula</input>
+                                <input type="radio" name="get" value="4">He is on a field trip to a science lab one day, and is bitten by a radioactive spider</input>
+                                <br><br>
+                            </div>
+
+                        
+
+                            <div id="questionFive">
+                                <h4>Question 5: What is Spider-man's real name?</h4>
+                                <input type="radio" name="real" value="1">Peter Parker</input>
+                                <input type="radio" name="real" value="2">Bruce Wayne</input>
+                                <input type="radio" name="real" value="3">Bruce Banner</input>
+                                <input type="radio" name="real" value="4">Clark Kent</input>
+                                <br><br>
+                            </div>
+
+
+                            <div id="questionSix">
+                                <h4>Question 6: Who does Spider-man live with at home?</h4>
+                                <input type="radio" name="home" value="1">His parents</input>
+                                <input type="radio" name="home" value="2">His Aunt and Uncle</input>
+                                <input type="radio" name="home" value="3">He lives by himself</input>
+                                <input type="radio" name="home" value="4">He lives with his roomate</input>
+                                <br><br>
+                            </div>
+
+
+                        
+        
+                            <div id="questionSeven">
+                                <h4>Question 7:Who is Spider-man's greatest enemy?</h4>
+                                <input type="radio" name="enemy" value="1">Venom</input>
+                                <input type="radio" name="enemy" value="2">The Lizard</input>
+                                <input type="radio" name="enemy" value="3">The Green Goblin</input>
+                                <input type="radio" name="enemy" value="4">Dr. Octopus</input>
+                                <br><br>
+                            </div>
+
+                           
+
+                            <div id="questionEight">
+                                <h4>Question 8: How much is the 1st apperance of Spiderman's comic book graded cgc 9.6 worth?</h4>
+                                <input type="radio" name="worth" value="1">1.8 million</input>
+                                <input type="radio" name="worth" value="2">1.1 million</input>
+                                <input type="radio" name="worth" value="3">500,000</input>
+                                <input type="radio" name="worth" value="4">250,000</input>
+                                <br><br>
+                            </div>
+
+
+                       
+
+                            <button id="finishedButton">FINISHED</button>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
 
                
-    </section>
-   
-    <section class="results">
-         <div class="results"></div>
+            </div>
+        </div>
+    </div>
 
-      
-    </section>
-          
-    
+<script type="text/javascript" src="../Trivia-Game/assets/javascript/app.js"></script>
 
-    <!-- Results HTML -->
 
-    <script type="text/javascript" src="./assets/trivia.js"></script>
 
 </body>
+
 </html>
