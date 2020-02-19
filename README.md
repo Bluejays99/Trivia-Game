@@ -1,7 +1,6 @@
 # Trivia-Game
 
-
-A fun Trivia-Game about your friendly neighborhood Spider-man.    A series of questions that test your knowlege about fun facts about Spider-man.  
+A fun Trivia-Game about your friendly neighborhood Spider-man.   A series of questions that test your knowlege about fun facts about Spider-man.  
 
 
 ## Deployment
