@@ -15,10 +15,11 @@ https://bluejays99.github.io/Trivia-Game/
 * CSS
 * Javascript
 
+
 ## Authors
 
 Chris Minassian
 
-See also the list of [contributors](https://bluejays99.github.io/Giftastic/) 
+See also the list of [contributors](https://bluejays99.github.io/Trivia-Game/) 
 
 
